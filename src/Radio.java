@@ -35,15 +35,17 @@ public class Radio implements IRadio{
 
     @Override
     public void setFrequence(String freq) throws Exception {
-        try{
-            if(freq.equals("AM") || freq.equals("FM")){
-                this.frequence = freq;
-            }else{
-                throw new Exception("Error");
-            }}
-            catch(Exception e){
-                System.out.println("ERROR");
+        try {
+            if(freq.equals("AM")){
+                this.frequence = "FM";
+        }else if(freq.equals("FM")){
+                this.frequence = "AM";
+        }else{
+                throw new Exception("Frecuencia no valida");
             }
+        } catch (Exception e) {
+            System.out.println("ERROR");
+        }
 
     }
 
