@@ -1,4 +1,21 @@
 public class Radio implements IRadio{
+
+    private String frequence;
+    private boolean on;
+    private double FMActualStation;
+    private int AMActualStation;
+    private double[] FMSlot = new double[12];
+    private int[] AMSlot = new int[12];
+
+    public Radio(){
+        this.frequence = "AM";
+        this.on = false;
+        this.FMActualStation = 87.9;
+        this.AMActualStation = 530;
+    }
+
+
+
     @Override
     public void on() {
 
