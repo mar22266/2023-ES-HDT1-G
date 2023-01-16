@@ -1,5 +1,14 @@
+/*
+ * Andre marroquin
+ * Gabriel Paz
+ * Andy Fuentes
+ * HT 1 ESTRUCTURA DE DATOS
+ *
+ * */
+
 public class Radio implements IRadio{
 
+    //ATRIBUTOS PRIVADOS PARA LA CLASE RADIO
     private String frequence;
     private boolean on;
     private double FMActualStation;
@@ -7,6 +16,7 @@ public class Radio implements IRadio{
     private double[] FMSlot = new double[12];
     private int[] AMSlot = new int[12];
 
+    //CONTRUCTOR
     public Radio(){
         this.frequence = "AM";
         this.on = false;
@@ -15,7 +25,7 @@ public class Radio implements IRadio{
     }
 
 
-
+//IMPLEMENTACION DE LOS METODOS DE LA INTERFAZ IRADIO
     @Override
     public void on() {
         this.on = true;
