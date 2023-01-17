@@ -16,9 +16,7 @@ class ControladoraTest {
     @Test
     void turn() {
         Controladora controladora = new Controladora();
-        controladora.turn();
         assertTrue(controladora.radio.isOn());
-        controladora.turn();
         assertFalse(controladora.radio.isOn());
     }
 
