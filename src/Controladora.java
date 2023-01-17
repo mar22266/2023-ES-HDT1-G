@@ -9,13 +9,24 @@
 public class Controladora {
     public IRadio radio = new Radio();
 
-    public void turn(){
+    public void encender(){
         if(radio.isOn()){
-            radio.off();
+            System.out.println("La radio ya está encendida");
         }else{
             radio.on();
+            System.out.println("ENCENDIENDO RADIO...");
         }
     }
+
+    public void apagar(){
+        if(radio.isOn()){
+            radio.off();
+            System.out.println("APAGANDO RADIO...");
+        }else{
+            System.out.println("La radio ya está apagada");
+        }
+    }
+
     public void cambioFrecuencia() throws Exception{
         radio.setFrequence(radio.getFrequence());
     }
